@@ -1,0 +1,26 @@
+{
+    "name": "rad/rad-framework-project",
+    "description": "RAD Framework Simple project example.",
+    "authors": [
+        {
+            "name": "Guillaume Monet",
+            "email": "guillaume.monet@free.fr"
+        }
+    ],
+    "require": {
+        "rad/rad-framework": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "Project\\": "src/Project/"
+        }
+    },
+    "scripts": {
+        "post-package-install": [
+            "Rad\\Composer\\Manager::installConfig"
+        ],
+        "post-package-update": [
+            "Rad\\Composer\\Manager::installConfig"
+        ]
+    }
+}
